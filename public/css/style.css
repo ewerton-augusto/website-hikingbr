@@ -8,6 +8,7 @@
 	padding: 0;
 	font-size: 1em;
 }
+/* /reset */
 
 body{
     font-family: 'montserrat-regular', 'Trebuchet MS', Arial, sans-serif;
@@ -99,3 +100,107 @@ footer a{
 .text-center{
     text-align: center;
 }
+
+/* Mobile Menu */
+@media (min-width: 780px){
+    html{
+        font-size: 1.125em;
+    }
+}
+
+@media (min-width: 1200px){
+    html{
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width: 1200px){
+    .container{
+        margin: 0.5em;
+    }
+}
+
+@media (max-width: 780px){
+
+    .nav-bar{
+        background: #39a59e;
+        padding: 1em;
+        margin: 0;
+
+        height: 100%;
+        width: 90%;
+        max-width: 320px;
+
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -90%;
+    }
+
+    .active-menu .nav-bar{
+        left: 0;
+    }
+
+    .main-menu li{
+        padding: 1em 0;
+        width: 100%;
+    }
+
+    .active-menu::after{
+        content: "";
+        display: block;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background: #222;
+    }
+}
+
+/** hide the mobile menu **/
+@media not all and (max-width: 780px){
+    .open-menu,
+    .close-menu {
+        display: none;
+    }
+}
+/** /hide the mobile menu **/
+
+.open-menu,
+.close-menu{
+    background: none;
+    border: 0;
+    outline: none;
+    -webkik-appearance: none;
+    font-size: 2em;
+    text-indent: -999em;
+}
+
+.open-menu{
+    height: 0;
+    width: .75em;
+    padding-top: .125em;
+    border-top: .375em double #222;
+    border-bottom: .125em solid #222;
+
+    vertical-align: middle;
+    margin: 0.5em 0.5em 0.5em 0;
+}
+
+.close-menu{
+    position: relative;
+    height: 1em;
+    width: 1em;
+}
+
+.close-menu::before{
+    content: '\00D7';
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-indent: 0;
+}
+/* /Mobile Menu */
