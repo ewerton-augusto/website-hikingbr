@@ -15,10 +15,11 @@ body{
 }
 
 header{
-    background: #39a59e;
+    background: #1c6ef3;
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
     width: 100%;
     padding: 0.5em 0;
-    margin-bottom: 1.5em;
+    margin-bottom: 0;
 }
 
 img {
@@ -57,16 +58,14 @@ img {
 
 .main-menu .active a {
     color: #222;
-    background-color: #ddd;
+    background-color: #eee;
     border-radius: 0.4em;
 }
 
 .main-menu a{
-    color: #ddd;
-
+    color: #eee;
     padding: 0.5em;
     margin: 0.5em;
-    
     text-decoration: none;
     text-transform: capitalize;
 }
@@ -81,18 +80,41 @@ footer a:hover{
     margin: 0.5em 0;
 }
 
+.home-welcome{
+    position: relative;
+}
+
+.welcome-content{
+    color: #eee;
+    position: absolute;
+    margin: 1em 1em;
+    padding: 0.25em;
+}
+
+.welcome-content h1{
+    font-size: 1.75em;
+    margin-bottom: 0.25em;
+}
+
+.welcome-content p{
+    font-size: 1.125em;
+    background: rgba(0, 0, 0, 0.65);
+    vertical-align: bottom;
+}
+
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
-
-    background: #696D7D;
-    color: #ddd;
+    background: #485563;
+    background-image: linear-gradient(to top, #29323c 0%, #485563 100%);
+    color: #eee;
     padding: 1em 0;
+    margin-top: 1.25em;
 }
 
 footer a{
-    color: #ddd;
+    color: #eee;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -106,11 +128,19 @@ footer a{
     html{
         font-size: 1.125em;
     }
+
+    .welcome-content{
+        top: 60%;
+    }
 }
 
 @media (min-width: 1200px){
     html{
         font-size: 1.25em;
+    }
+
+    .welcome-content{
+        top: 78%;
     }
 }
 
@@ -118,12 +148,16 @@ footer a{
     .container{
         margin: 0.5em;
     }
+
+    .home-welcome {        
+        margin: 0;
+    }
 }
 
 @media (max-width: 780px){
-
     .nav-bar{
-        background: #39a59e;
+        background: #1c6ef3;
+        background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
         padding: 1em;
         margin: 0;
 
@@ -134,11 +168,13 @@ footer a{
         position: fixed;
         z-index: 1;
         top: 0;
-        left: -90%;
+        right: -90%;
+
+        text-align: right;
     }
 
     .active-menu .nav-bar{
-        left: 0;
+        right: 0;
     }
 
     .main-menu li{
@@ -157,6 +193,24 @@ footer a{
         right: 0;
 
         background: #222;
+    }
+
+    .welcome-content{
+        top: 50%;
+    }
+}
+
+@media (max-width: 600px){
+    .welcome-content{
+        top: 1%;
+    }
+
+    .welcome-content h1{
+        font-size: 1.25em;
+    }
+
+    .welcome-content p{
+        font-size: 1em;
     }
 }
 
@@ -185,9 +239,10 @@ footer a{
     padding-top: .125em;
     border-top: .375em double #222;
     border-bottom: .125em solid #222;
-
+    float: right;
     vertical-align: middle;
     margin: 0.5em 0.5em 0.5em 0;
+    
 }
 
 .close-menu{
