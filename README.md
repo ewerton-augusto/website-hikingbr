@@ -12,7 +12,3 @@ JavaScript
 ## Launch
 
 View the HTML Page in Your Browser. After download, open the index.html
-
-## Others
-
-[Hiking Br - Demo](https://hikingbr.easystems.com.br/)
